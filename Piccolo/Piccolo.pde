@@ -3,8 +3,7 @@ PICCOLO is a tiny Arduino-based audio visualizer...a bit like
 Spectro, but smaller, with microphone input rather than line-in.
 
 Hardware requirements:
- - Arduino Uno, Duemilanove or '328 Diecimila (as written, this
-   won't run on Mega, Leonardo, etc., but can probably be adapted)
+ - Most Arduino or Arduino-compatible boards (ATmega 328P or better).
  - Adafruit Bicolor LED Matrix with I2C Backpack (ID: 902)
  - Adafruit Electret Microphone Amplifier (ID: 1063)
  - Optional: battery for portable use (else power through USB)
