@@ -1,6 +1,16 @@
 ;-----------------------------------------------------------------------------;
 ; Fixed-point FFT routines for megaAVRs                        (C)ChaN, 2005
 ;-----------------------------------------------------------------------------;
+; * This program is opened under license policy of following trems.
+;
+;  Copyright (C) 2005, ChaN, all right reserved.
+;
+; * This program is a free software and there is NO WARRANTY.
+; * No restriction on use. You can use, modify and redistribute it for
+;   personal, non-profit or commercial use UNDER YOUR RESPONSIBILITY.
+; * Redistributions of source code must retain the above copyright notice.
+;
+;-----------------------------------------------------------------------------;
 ;
 ; void fft_input (const int16_t *array_src, complex_t *array_bfly);
 ; void fft_execute (complex_t *array_bfly);

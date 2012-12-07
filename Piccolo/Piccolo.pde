@@ -16,7 +16,11 @@ Connections:
  - Analog pin 0 to mic amp output
  - +5V, GND, SDA (or analog 4) and SCL (analog 5) to I2C Matrix backpack
 
-Written by Adafruit industries.
+Written by Adafruit Industries.  Distributed under the BSD license --
+see license.txt for more information.  This paragraph must be included
+in any redistribution.
+
+ffft library is provided under its own terms -- see ffft.S for specifics.
 */
 
 // IMPORTANT: FFT_N should be #defined as 128 in ffft.h.  This is different
