@@ -26,7 +26,7 @@ void fft_output (complex_t *, uint16_t *);
 int16_t fmuls_f (int16_t, int16_t);
 } 
 #include <avr/pgmspace.h>
-extern const prog_int16_t tbl_window[];
+extern const int16_t PROGMEM tbl_window[];
 
 #else				/* for asm module */
 

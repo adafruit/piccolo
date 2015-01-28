@@ -1,6 +1,5 @@
 /*
-PICCOLO is a tiny Arduino-based audio visualizer...a bit like
-Spectro, but smaller, with microphone input rather than line-in.
+PICCOLO is a tiny Arduino-based audio visualizer.
 
 Hardware requirements:
  - Most Arduino or Arduino-compatible boards (ATmega 328P or better).
@@ -23,8 +22,7 @@ in any redistribution.
 ffft library is provided under its own terms -- see ffft.S for specifics.
 */
 
-// IMPORTANT: FFT_N should be #defined as 128 in ffft.h.  This is different
-// than Spectro, which requires FFT_N be 64 in that file when compiling.
+// IMPORTANT: FFT_N should be #defined as 128 in ffft.h.
 
 #include <avr/pgmspace.h>
 #include <ffft.h>
@@ -65,7 +63,7 @@ inputs than others.  The software works at making the graph interesting,
 but some columns will always be less lively than others, especially
 comparing live speech against ambient music of varying genres.
 */
-PROGMEM uint8_t
+static const uint8_t PROGMEM
   // This is low-level noise that's subtracted from each FFT output column:
   noise[64]={ 8,6,6,5,3,4,4,4,3,4,4,3,2,3,3,4,
               2,1,2,1,3,2,3,2,1,2,3,1,2,3,4,4,
@@ -105,7 +103,7 @@ PROGMEM uint8_t
      77,  60,  45,  34,  25,  18,  13,   9,   7,   5,
       3,   2,   2,   1,   1,   1,   1 },
   // And then this points to the start of the data for each of the columns:
-  *colData[] = {
+  * const colData[]  = {
     col0data, col1data, col2data, col3data,
     col4data, col5data, col6data, col7data };
 
@@ -142,7 +140,6 @@ void setup() {
 
   sei(); // Enable interrupts
 }
-
 
 void loop() {
   uint8_t  i, x, L, *data, nBins, binNum, weighting, c;
