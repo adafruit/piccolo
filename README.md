@@ -1,3 +1,10 @@
+## This repository has been archived
+
+See https://github.com/adafruit/Adafruit_Learning_System_Guides/tree/master/Tiny_Music_Visualizer 
+for the current code
+
+See the license terms for code in each code directory (they are separate)
+
 piccolo
 =======
 
